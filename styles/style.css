@@ -1,4 +1,54 @@
+#title {
+    text-align: center;
+    color: black;
+}
 
+body {
+    --gray: rgb(223, 220, 220);
+    --blue: rgb(101, 200, 247);
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: white;
+   
+}
+
+#donut-shops {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: white;
+}
+
+.donut-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    aspect-ratio: 1;
+    border: 1px solid var(--gray);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.donut-shop:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+.donut-shop img {
+    width: 80%
+}
   
 footer {
     position: fixed;

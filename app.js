@@ -1,10 +1,12 @@
 import { getDonutShops } from './fetch-utils.js';
+import { renderDonutShop } from './render-utils.js';
 
-const donutShopsContainer = document.getElementById('donut-shops-container');
+const donutShops = document.getElementById('donut-shops');
 
 window.addEventListener('load', async() => {
-    const donutShops = await getDonutShops();
-    for (let shop of donutShops) {
-        console.log(shop.name);
+    const shops = await getDonutShops();
+    for (let shop of shops) {
+        const shopLink = renderDonutShop(shop);
+        donutShops.append(shopLink);
     }
 });
