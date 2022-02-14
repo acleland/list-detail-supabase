@@ -27,6 +27,12 @@ main {
     background-color: white;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .donut-shop {
     display: flex;
     flex-direction: column;
@@ -47,7 +53,55 @@ main {
 }
 
 .donut-shop img {
-    width: 80%
+    width: 100%
+}
+
+@media (min-width: 500px ) {
+    #donut-shops {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: white;
+        flex-wrap: wrap;
+    }
+
+    .donut-shop {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; */
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr;
+        justify-content: center;
+        width: 25%;
+        max-width: 250px;
+        
+        border: 1px solid var(--gray);
+        padding-bottom: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        font-size: .7em;
+        text-align: center;
+    }
+    
+    .donut-shop {
+        /* min-width: 100%; */
+        object-fit: fill;
+       
+    }
+
+}
+
+@media (min-width: 700px) {
+    
 }
   
 footer {
